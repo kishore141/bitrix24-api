@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "akamud.vscode-theme-onelight",
+    "mikestead.dotenv",
+    "esbenp.prettier-vscode",
+    "emmanuelbeziat.vscode-great-icons",
+    "dbaeumer.vscode-eslint",
+    "github.github-vscode-theme",
+    "eamodio.gitlens",
+    "humao.rest-client",
+    "jerrygoyal.shortcut-menu-bar",
+    "rangav.vscode-thunder-client",
+    "Gruntfuggly.todo-tree"
+  ]
+}

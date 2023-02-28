@@ -1,0 +1,36 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+#Mac DS
+.DS_Store
+*/.DS_Store
+
+#VScode
+.vscode
+
+#src
+src/
+
+#tests
+test
+coverage
+
+#build tools
+.travis.yml
+.jenkins.yml
+.codeclimate.yml
+
+#linters
+.jscsrc
+.jshintrc
+.eslintrc*
+.eslintignore
+.babelrc
+
+#editor settings
+.idea
+.editorconfig
+
+#env
+*.env
