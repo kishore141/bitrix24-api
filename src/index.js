@@ -2,6 +2,7 @@ import { Activity } from "./activity";
 import { TimeLineComment } from "./timeline-comment";
 import { Contact } from "./contact";
 import { Deal } from "./deal";
+import { Department } from "./department";
 
 export class Bitrix24Api {
   constructor(hookUrl) {
@@ -10,6 +11,7 @@ export class Bitrix24Api {
     this.TimeLineComment = TimeLineComment.withHook(hookUrl);
     this.Contact = Contact.withHook(hookUrl);
     this.Deal = Deal.withHook(hookUrl);
+    this.Department = Department.withHook(hookUrl);
   }
 
   static withHook(url) {
