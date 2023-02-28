@@ -1,6 +1,6 @@
 {
   "name": "@kishore141/bitrix24-api",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "simple bitrix24 api",
   "main": "build/index.js",
   "scripts": {
