@@ -13,7 +13,7 @@ export class Contact {
 
   async getList(filter = {}, select = ["ID", "Name", "Second_Name", "Last_Name"]) {
     const { success, response } = await NetworkClient.postJson(
-      CONFIG.URL.GET_LIST,
+      this.hookUrl + CONFIG.URL.GET_LIST,
       {
         filter,
         select,
@@ -29,7 +29,7 @@ export class Contact {
 
   async updateById(id, contact) {
     const body = { id, fields: contact };
-    const { success, response } = await NetworkClient.postJson(CONFIG.URL.UPDATE, body, {});
+    const { success, response } = await NetworkClient.postJson(this.hookUrl + CONFIG.URL.UPDATE, body, {});
     if (success) {
       return response.result;
     } else {
@@ -42,7 +42,7 @@ export class Contact {
       fields: contact,
       params: { REGISTER_SONET_EVENT: "Y" },
     };
-    const { success, response } = await NetworkClient.postJson(CONFIG.URL.ADD, body, {});
+    const { success, response } = await NetworkClient.postJson(this.hookUrl + CONFIG.URL.ADD, body, {});
     if (success) {
       return response;
     } else {
