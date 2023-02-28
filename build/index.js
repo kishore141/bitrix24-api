@@ -8,6 +8,7 @@ var _activity = require("./activity");
 var _timelineComment = require("./timeline-comment");
 var _contact = require("./contact");
 var _deal = require("./deal");
+var _department = require("./department");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -22,6 +23,7 @@ var Bitrix24Api = /*#__PURE__*/function () {
     this.TimeLineComment = _timelineComment.TimeLineComment.withHook(hookUrl);
     this.Contact = _contact.Contact.withHook(hookUrl);
     this.Deal = _deal.Deal.withHook(hookUrl);
+    this.Department = _department.Department.withHook(hookUrl);
   }
   _createClass(Bitrix24Api, null, [{
     key: "withHook",
