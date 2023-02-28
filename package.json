@@ -2,7 +2,7 @@
   "name": "@kishore141/bitrix24-api",
   "version": "1.0.0",
   "description": "simple bitrix24 api",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src --ext .js,.jsx",
@@ -11,7 +11,6 @@
     "build": "npm run clean && npm run transpile",
     "dev": "node src/index.js",
     "start": "node build/index.js"
-    
   },
   "keywords": [
     "bitrix24"
@@ -26,5 +25,8 @@
     "eslint": "^8.35.0",
     "eslint-config-standard": "^17.0.0",
     "rimraf": "^4.1.2"
+  },
+  "dependencies": {
+    "@kishore141/network-client": "^1.1.0"
   }
 }
