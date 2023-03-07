@@ -5,6 +5,7 @@ import { Deal } from "./deal";
 import { Department } from "./department";
 import { User } from "./user";
 import { DriveAttachedObject } from "./drive-attached-object";
+import { DiskFile } from "./disk-file";
 
 export class Bitrix24Api {
   constructor(hookUrl) {
@@ -16,6 +17,7 @@ export class Bitrix24Api {
     this.Department = Department.withHook(hookUrl);
     this.User = User.withHook(hookUrl);
     this.DriveAttachedObject = DriveAttachedObject.withHook(hookUrl);
+    this.DiskFile = DiskFile.withHook(hookUrl);
   }
 
   static withHook(url) {
