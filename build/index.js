@@ -11,6 +11,7 @@ var _deal = require("./deal");
 var _department = require("./department");
 var _user = require("./user");
 var _driveAttachedObject = require("./drive-attached-object");
+var _diskFile = require("./disk-file");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -28,6 +29,7 @@ var Bitrix24Api = /*#__PURE__*/function () {
     this.Department = _department.Department.withHook(hookUrl);
     this.User = _user.User.withHook(hookUrl);
     this.DriveAttachedObject = _driveAttachedObject.DriveAttachedObject.withHook(hookUrl);
+    this.DiskFile = _diskFile.DiskFile.withHook(hookUrl);
   }
   _createClass(Bitrix24Api, null, [{
     key: "withHook",
