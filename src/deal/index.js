@@ -58,4 +58,14 @@ export class Deal {
       return false;
     }
   }
+
+  async getById(id) {
+    const body = { id };
+    const { success, response } = await NetworkClient.postJson(this.hookUrl + CONFIG.URL.GET_BY_ID, body, {});
+    if (success) {
+      return response.result;
+    } else {
+      return false;
+    }
+  }
 }
