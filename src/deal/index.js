@@ -48,4 +48,14 @@ export class Deal {
       return false;
     }
   }
+
+  async getFields() {
+    const body = {};
+    const { success, response } = await NetworkClient.postJson(this.hookUrl + CONFIG.URL.FIELDS, body, {});
+    if (success) {
+      return response.result;
+    } else {
+      return false;
+    }
+  }
 }

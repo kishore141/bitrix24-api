@@ -136,6 +136,39 @@ var Deal = /*#__PURE__*/function () {
       }
       return create;
     }()
+  }, {
+    key: "getFields",
+    value: function () {
+      var _getFields = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
+        var body, _yield$NetworkClient$4, success, response;
+        return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+          while (1) switch (_context4.prev = _context4.next) {
+            case 0:
+              body = {};
+              _context4.next = 3;
+              return _networkClient.NetworkClient.postJson(this.hookUrl + _config["default"].URL.FIELDS, body, {});
+            case 3:
+              _yield$NetworkClient$4 = _context4.sent;
+              success = _yield$NetworkClient$4.success;
+              response = _yield$NetworkClient$4.response;
+              if (!success) {
+                _context4.next = 10;
+                break;
+              }
+              return _context4.abrupt("return", response.result);
+            case 10:
+              return _context4.abrupt("return", false);
+            case 11:
+            case "end":
+              return _context4.stop();
+          }
+        }, _callee4, this);
+      }));
+      function getFields() {
+        return _getFields.apply(this, arguments);
+      }
+      return getFields;
+    }()
   }], [{
     key: "withHook",
     value: function withHook(hookUrl) {
